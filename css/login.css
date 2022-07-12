@@ -1,0 +1,154 @@
+
+.login-container{
+
+    background-color:#FFFFFF;
+    height: 100vh;
+    padding: 50px 10px ;
+
+}
+.login-box{
+    font-size: .9em;
+    background-color: #EDF4FC;
+    border: 1px solid #d8e3f5;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 40px;
+    margin: 20px 30px;
+    height: 480px;
+}
+
+
+.login-box .input-group{
+   margin: 30px 0px;
+   position: relative;
+   
+   
+   
+
+}
+.login-box  label{
+    display: block;
+    font-size: 1.3em;
+
+}
+.login-box input:focus{
+     outline: none;
+     border: 1px solid #9fa8da;
+     
+
+}
+.input-group input{
+    border-radius: 20px;
+    width: 60%;
+    border:1px solid #EDF4FC;
+    padding: 6px 20px;
+    margin: 10px 0;
+    direction: ltr;
+
+}
+.input-group.success input{
+
+    border-color:#66bb6a;
+}
+.input-group.error input{
+    border-color:#ee3030;
+   
+}
+
+.input-group.error small{
+    visibility:visible;
+   
+}
+
+small{
+    color: #ee3030;
+    position:absolute;
+    bottom: -15px;
+    right: 190px;
+    visibility:hidden; 
+    
+}
+
+#eye{
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 143px;
+    top: 48px; 
+    font-size: 1.3em;
+    color:#a4b1c5 ;
+    cursor: pointer;
+}
+.do-you-have{
+    font-size: .9em;
+
+}
+.do-you-have a{
+    color: #F26A50;
+
+}
+.do-you-have a:hover{
+    text-decoration: underline;
+}
+.submit-btn{
+    margin: 25px 1px 32px
+}
+.submit-btn a{
+  border: none;
+  background-color: #F26A50;
+  color:white;
+  border-radius: 20px; 
+  font-size: 1.3em;
+  margin: 25px;
+  padding: 1px 35px 6px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+}
+.submit-btn a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ffffff33;
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    transition: all 0.3s ease-out;
+
+}
+.submit-btn a:hover::before{
+    width: 100%;
+}
+.social{
+display: flex;
+justify-content: space-evenly;
+border-top: 1px solid #989faa;
+width: 60%;
+margin: 0 auto;
+
+
+
+}
+.social i{
+    padding:30px;
+    font-size: 1.7em;
+    color: #4D5DAD;
+}
+.social i:hover{
+    color: #e25a3ffb;
+}
+.login-img{
+    height: 100%;
+    width: 114%;
+
+}
+.login-img img{
+    height: 100%;
+    width: 100%;
+    margin-right: -50px;
+    object-fit: cover;
+}

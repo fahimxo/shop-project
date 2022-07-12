@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/flexboxgrid.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>login</title>
+</head>
+<body>
+    <main>
+        <div class="login-container">
+           <div class="row">
+            <div class="col-lg-8">
+                <div class="login-box">
+                    <form id="form" action="">
+                        <div class="input-group">
+                            <label for="user" title="name">نام کاربری</label>
+                            <input type="text" id="user">
+                            <small class="suser"></small>
+                        </div>
+                        <div class="input-group">
+                            <label for="pass">رمز عبور </label>
+                            <input id="pass"  type="password">
+                            <i id="eye" class="far fa-eye-slash"></i>
+                            <small class="spass"></small>
+                            <!-- <i id="eye" class="far fa-eye"></i> -->
+                        </div>
+                        <p class="do-you-have">حساب کاربری ندارید؟
+                            <a href="">ایجاد حساب کاربری</a>
+                        </p>
+                        <div class="submit-btn">
+                            <a id="login" href="./panel.html">ورود</a>
+                        </div>
+                    </form>
+                    <div class="social">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-google-plus-g"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="col-lg-4">
+                <div class="login-img">
+                    <img src="./pic/login.jpg" alt="login">
+                </div>
+            </div>
+           </div>
+        </div>
+    </main>
+
+    <script>
+
+    //  login
+
+let pass = document.getElementById('pass');
+let user = document.querySelector('#user');
+let suser = document.querySelector('.suser');
+let spass = document.querySelector('.spass');
+let eye = document.getElementById('eye');
+let login = document.querySelector('#login');
+
+let checkUser=false;
+let checkPass=false;
+
+login.addEventListener('click',(e)=>{
+    
+    checkInput()
+
+    if(checkUser === true && checkPass ===true ){
+        
+    }else{
+        e.preventDefault()
+
+    }
+
+        
+    
+})
+
+const checkInput = (e)=>{
+    let passValue =pass.value.trim()
+    let userValue =user.value.trim()
+    
+    if (userValue=== 'rahim'){
+        setSuccess(user)
+        checkUser=true;
+
+    }else{
+        setError(user,'نام کاربری را درست وارد کنید')
+    }
+
+    
+    
+    if (passValue === '1234' ){
+        setSuccess(pass)
+        checkPass=true;
+    }else{
+        setError(pass,'رمز عبور را درست وارد کنید')
+    }
+}
+const setError = (input,massage)=>{
+    const inputGroup=input.parentElement;
+    const small =inputGroup.querySelector('small')
+    inputGroup.className = 'input-group error';
+    small.innerHTML = massage;
+}
+const setSuccess = (input)=>{
+    const inputGroup=input.parentElement;
+    inputGroup.className = 'input-group success';
+
+}
+
+eye.addEventListener('click',()=>{
+    if (pass.type === "text") {
+        pass.type = "password";
+        eye.className="far fa-eye-slash";
+       }   
+    else{
+        pass.type = "text";
+        eye.className="far fa-eye";
+       } 
+
+})
+
+    </script>
+</body>
+</html>

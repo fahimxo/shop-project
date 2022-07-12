@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./css/panel.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/flexboxgrid.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>panel</title>
+</head>
+
+<body>
+    <div class="panel" id="panel" >
+        <div id="right ">
+            <section id="menu">
+                <div class="user-info">
+                    <div class="img-name">
+                        <div class="img">
+                            <img src="./pic/IMG_20210114_173319_308.jpg" alt="">
+                        </div>
+
+                        <span class="name">رحیم احمدی</span>
+                        <i class="fas fa-angle-up" id="showdetail" ></i>
+
+                    </div>
+                    <div class="details">
+                        <div class="details-item">
+                            <span>سطح دسترسی :</span>
+                            <span>ادمین</span>
+                        </div>
+                        <div class="details-item">
+                            <span>وضعیت :</span>
+                            <span>انلاین</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-btns">
+                    <a href="" class="item">
+                        <i class="fas fa-box-open"></i>
+                        <span> محصولات</span>
+
+                    </a>
+                    <a href="" class="item">
+                        <i class="fas fa-bell"></i>
+                        <span> سفارشات شما</span>
+
+                    </a>
+                    <a href="" class="item">
+                        <i class="fas fa-chart-line"></i>
+                        <span> گزارش ها</span>
+
+                    </a>
+                    <a href="" class="item">
+                        <i class="fas fa-headset"></i>
+                        <span> پشتیبانی</span>
+
+                    </a>
+                    <a href="" class="item">
+                        <i class="fas fa-users"></i>
+                        <span> کاربرها</span>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+        <div id="left">
+            <section class="main-box">
+                <header>
+                    <nav>
+                        <div class="right">
+                            <i class="fas fa-bars" id="menu-icon"></i>
+                            <div class="search">
+                                <input type="text">
+                                <i class='fas fa-search'></i>
+                            </div>
+
+                        </div>
+                        <div class="left">
+                            <a href=""><i class="fas fa-bell"></i></a>
+                            <a href=""><i class="fas fa-cog"></i></a>
+                            <a href="./index.html"><i class="fas fa-power-off"></i></a>
+
+
+                        </div>
+                    </nav>
+                    <div class="header-msg">
+                        <h3>آخرین ورود ۲روز پیش</h3>
+                        <a href="" class="lang-btn">فارسی</a>
+
+                    </div>
+                </header>
+                <div class="holder">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="mini-cart">
+                                <div class="right">
+                                    <i class="fas fa-clipboard-list"></i>
+                                </div>
+                                <div class="left">
+                                    <span>تکمیل انبار </span>
+                                    <span>۱۰۰</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="mini-cart ">
+                                <div class="right">
+                                    <i class="fas fa-clipboard-list"></i>
+                                </div>
+                                <div class="left">
+                                    <span>تکمیل انبار </span>
+                                    <span>۱۵۰</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="mini-cart ">
+                                <div class="right">
+                                    <i class="fas fa-clipboard-list"></i>
+                                </div>
+                                <div class="left">
+                                    <span>تکمیل انبار </span>
+                                    <span>۴۰۰</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="mini-cart">
+                                <div class="right">
+                                    <i class="fas fa-clipboard-list"></i>
+                                </div>
+                                <div class="left">
+                                    <span>تکمیل انبار </span>
+                                    <span>۲۰۰</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="revenue-box">
+                        <div class="head">
+                            <div class="right">
+                                درآمد
+                            </div>
+                            <div class="left">
+                                <i class="fas fa-redo"></i>
+                                <i class="fas fa-cog"></i>
+                                
+                            </div>
+
+                        </div>
+                        <div class="content">
+                            <!-- <img src="./pic/nemodar2.png" alt=""> -->
+                            <canvas id="myChart" width="400" height="200"></canvas>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+    <script src="./js file/jquery-3.6.0.min.js"></script>    
+    <script src="./js file/panel.js"></script>    
+</body>
+
+</html>

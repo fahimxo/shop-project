@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/flexboxgrid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <link rel="stylesheet" href="./css/anime.css" type="text/css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css" type="text/css">
+
+    <title>shop</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-right">
+                <a href=""> <i class="fas fa-user"></i> </a>
+                <a href="" class="shopping" id="my-cart" onclick=""> <i class="fas fa-shopping-cart"></i><span class="cart-number"></span> </a>
+                <a href=""> <i class="fas fa-home"></i> </a>
+                <a href=""> <i class="fas fa-search"></i> </a>
+
+            </div>
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                      <span class="close">&times;</span>
+                      <h2>سبد خرید</h2>
+                    </div>
+                    <div class="modal-body">
+                        <table class="my-table">
+                            <thead>
+                                <tr>
+                                    <th>حذف</th>
+                                    <th>قیمت</th>
+                                    <th>نام محصول</th>
+                                    <th>تصویر</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                        <div class="button-cart">
+                        <a href="" id="clear-cart"> پاک کردن همه</a>
+                        <span class="total"></span>
+                        </div>
+                        
+                    </div>
+                    
+                  </div>
+              
+              </div>
+            <div class="nav-left">
+                <div class="login-btn">
+                    <a href="./login.html"><i class="fas fa-user"></i> ثبت نام/ ورود</a>
+                </div>
+
+            </div>
+
+        </nav>
+        <section class="slider">
+            <div class="slides">
+                <div class="item active" id="item1">
+                    <img src="pic/xiomi.webp" alt="">
+
+                </div>
+                <div class="item " id="item2">
+                    <img src="pic/top-slider2.jpg" alt="">
+                </div>
+                <div class="item " id="item3">
+                    <img src="pic/samsung.webp" alt="">
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                <i id="dot3" onclick="setslide('item3',3)" class="fas fa-circle active"></i>
+                <i id="dot2" onclick="setslide('item2',2)" class="fas fa-circle "></i>
+                <i id="dot1" onclick="setslide('item1',1)" class="fas fa-circle"></i>
+            </div>
+
+
+        </section>
+
+
+    </header>
+    <main>
+        <section class="product-sec-new">
+            <div class="row courses-list">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="shaping-card">
+                        <div class="img-sec">
+                            <img src="./pic/goshi1.webp" alt="mobile">
+                            <span class="hot-offer">پیشنهاد ویژه</span>
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="title">
+                            گوشی موبایل
+                        </div>
+                        <div class="buttons">
+                            <div class="right">
+                                <div class="price">10 میلیون تومان</div>
+                            </div>
+                            <div class="left">
+                                <div class="extend-btn btn-fav">
+                                    <a class="b-text" href="">علاقه</a>
+                                    <i class="b-icon fas fa-heart"></i>
+                                </div>
+                                <div class="extend-btn">
+                                    <a href="" data-id="1" class="b-text add-to-cart">خرید</a>
+                                    <i class="b-icon fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="shaping-card">
+                        <div class="img-sec">
+                            <img src="./pic/goshi2.webp" alt="mobile">
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+
+                            </div>
+                        </div>
+                        <div class="title">
+                            گوشی موبایل
+                        </div>
+                        <div class="buttons">
+                            <div class="right">
+                                <div class="price">12 میلیون تومان</div>
+                            </div>
+                            <div class="left">
+                                <div class="extend-btn btn-fav">
+                                    <a class="b-text" href="">علاقه</a>
+                                    <i class="b-icon fas fa-heart"></i>
+                                </div>
+                                <div class="extend-btn">
+                                    <a href="" data-id="2" class="b-text add-to-cart">خرید</a>
+                                    <i class="b-icon fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+
+                    <div class="shaping-card">
+                        <div class="img-sec">
+                            <img src="./pic/goshi3.webp" alt="mobile">
+                            <span class="hot-offer">پیشنهاد ویژه</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+
+                            </div>
+                        </div>
+                        <div class="title">
+                            گوشی موبایل
+                        </div>
+                        <div class="buttons">
+                            <div class="right">
+                                <div class="price">36 میلیون تومان</div>
+                            </div>
+                            <div class="left">
+                                <div class="extend-btn btn-fav">
+                                    <a class="b-text" href="">علاقه</a>
+                                    <i class="b-icon fas fa-heart"></i>
+                                </div>
+                                <div  class="extend-btn ">
+                                    <a href="#" data-id="3" class="b-text add-to-cart">خرید</a>
+                                    <i class="b-icon fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="shaping-card">
+                        <div class="img-sec">
+                            <img src="./pic/goshi4.webp" alt="mobile">
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+
+                            </div>
+                        </div>
+                        <div class="title">
+                            گوشی موبایل
+                        </div>
+                        <div class="buttons">
+                            <div class="right">
+                                <div class="price">15 میلیون تومان</div>
+                            </div>
+                            <div class="left">
+                                <div class="extend-btn btn-fav">
+                                    <a class="b-text" href="">علاقه</a>
+                                    <i class="b-icon fas fa-heart"></i>
+                                </div>
+                                <div class="extend-btn">
+                                    <a href="" data-id="4" class="b-text add-to-cart">خرید</a>
+                                    <i class="b-icon fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+        </section>
+
+        <section class="super-offer-section">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="super-offer-box">
+                        <span class="title-suges"> پیشنهاد شگفت انگیز</span>
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="img-container">
+                                        <img src="./pic/goshi5.webp" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="haraj-sec">
+                                        <div class="price-row">
+                                            <div class="price">۱ میلیون تومان</div>
+                                            <div class="off">۵۰٪ تخفیف</div>
+                                        </div>
+                                        <div class="title">گوشی آیفون</div>
+                                        <div class="counter-down">
+                                            <span id="secondes"> 40 </span> :
+                                            <span id="minutes"> 26 </span> :
+                                            <span id="hours"> 17</span>
+                                        </div>
+                                        <div class="remaining">زمان باقی مانده تا پایان سفارش</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="banner">
+                        <img src="./pic/haraj2.jpeg" alt="offer sale">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="dragble-list courses-list">
+            <div class="title">
+                <span>هندزفری ها</span>
+            </div>
+            <div id="owl-product" class="owl-carousel owl-theme">
+                
+                <div class="item">
+                    <div class="shaping-card">
+                        <div class="img-sec">
+                            <img src="./pic/h1.jpg" alt="mobile">
+                            <span class="hot-offer">پیشنهاد ویژه</span>
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="title">
+                            هندزفری
+                        </div>
+                        <div class="buttons">
+                            <div class="right">
+                                <div class="price">1 میلیون تومان</div>
+                            </div>
+                            <div class="left">
+                                <div class="extend-btn btn-fav">
+                                    <a class="b-text" href="">علاقه</a>
+                                    <i class="b-icon fas fa-heart"></i>
+                                </div>
+                                <div class="extend-btn">
+                                    <a href="" data-id="5" class="b-text add-to-cart">خرید</a>
+                                    <i class="b-icon fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="shaping-card">
+                        <div class="img-sec">
+                            <img src="./pic/h2.jpg" alt="mobile">
+                            <span class="hot-offer">پیشنهاد ویژه</span>
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="title">
+                            هندزفری
+                        </div>
+                        <div class="buttons">
+                            <div class="right">
+                                <div class="price">1 میلیون تومان</div>
+                            </div>
+                            <div class="left">
+                                <div class="extend-btn btn-fav">
+                                    <a class="b-text" href="">علاقه</a>
+                                    <i class="b-icon fas fa-heart"></i>
+                                </div>
+                                <div class="extend-btn">
+                                    <a href="" data-id="6" class="b-text add-to-cart">خرید</a>
+                                    <i class="b-icon fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="shaping-card">
+                        <div class="img-sec">
+                            <img src="./pic/h3.jpg" alt="mobile">
+                            <span class="hot-offer">پیشنهاد ویژه</span>
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="title">
+                            هندزفری
+                        </div>
+                        <div class="buttons">
+                            <div class="right">
+                                <div class="price">1 میلیون تومان</div>
+                            </div>
+                            <div class="left">
+                                <div class="extend-btn btn-fav">
+                                    <a class="b-text" href="">علاقه</a>
+                                    <i class="b-icon fas fa-heart"></i>
+                                </div>
+                                <div class="extend-btn">
+                                    <a href="" data-id="7" class="b-text add-to-cart">خرید</a>
+                                    <i class="b-icon fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="shaping-card">
+                        <div class="img-sec">
+                            <img src="./pic/h4.jpg" alt="mobile">
+                            <span class="hot-offer">پیشنهاد ویژه</span>
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="title">
+                            هندزفری
+                        </div>
+                        <div class="buttons">
+                            <div class="right">
+                                <div class="price">1 میلیون تومان</div>
+                            </div>
+                            <div class="left">
+                                <div class="extend-btn btn-fav">
+                                    <a class="b-text" href="">علاقه</a>
+                                    <i class="b-icon fas fa-heart"></i>
+                                </div>
+                                <div class="extend-btn">
+                                    <a href="" data-id="8" class="b-text add-to-cart">خرید</a>
+                                    <i class="b-icon fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="shaping-card">
+                        <div class="img-sec">
+                            <img src="./pic/h5.jpg" alt="mobile">
+                            <span class="hot-offer">پیشنهاد ویژه</span>
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="title">
+                           هندزفری
+                        </div>
+                        <div class="buttons">
+                            <div class="right">
+                                <div class="price">1 میلیون تومان</div>
+                            </div>
+                            <div class="left">
+                                <div class="extend-btn btn-fav">
+                                    <a class="b-text" href="">علاقه</a>
+                                    <i class="b-icon fas fa-heart"></i>
+                                </div>
+                                <div class="extend-btn">
+                                    <a href="" data-id="9" class="b-text add-to-cart">خرید</a>
+                                    <i class="b-icon fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="shaping-card">
+                        <div class="img-sec">
+                            <img src="./pic/h6.jpg" alt="mobile">
+                            <span class="hot-offer">پیشنهاد ویژه</span>
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="title">
+                          هندزفری
+                        </div>
+                        <div class="buttons">
+                            <div class="right">
+                                <div class="price">1 میلیون تومان</div>
+                            </div>
+                            <div class="left">
+                                <div class="extend-btn btn-fav">
+                                    <a class="b-text" href="">علاقه</a>
+                                    <i class="b-icon fas fa-heart"></i>
+                                </div>
+                                <div class="extend-btn">
+                                    <a href="" data-id="10" class="b-text add-to-cart">خرید</a>
+                                    <i class="b-icon fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="shaping-card">
+                        <div class="img-sec">
+                            <img src="./pic/h7.jpg" alt="mobile">
+                            <span class="hot-offer">پیشنهاد ویژه</span>
+
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="title">
+                           هندزفری
+                        </div>
+                        <div class="buttons">
+                            <div class="right">
+                                <div class="price">1 میلیون تومان</div>
+                            </div>
+                            <div class="left">
+                                <div class="extend-btn btn-fav">
+                                    <a class="b-text" href="">علاقه</a>
+                                    <i class="b-icon fas fa-heart"></i>
+                                </div>
+                                <div class="extend-btn">
+                                    <a href="" data-id="11" class="b-text add-to-cart">خرید</a>
+                                    <i class="b-icon fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <div class="foter">
+            <div class="row top-foter">
+             <div class=".righ-fot col-lg-8">
+                <div class="aboutus">
+                    <h3> درباره ی ما</h3>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و
+                         متون بلکه روزنامه و مجله در ستون و سطرآنچنان 
+                         که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+                          کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، 
+                         راحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد. </p>
+                </div>
+              </div>
+              <div class="left-fot col-lg-4">
+                  <p>ما را در شبکه های اجتماعی دنبال کنید</p>
+                  <div class="socials">
+                      <a href=""><i class="fab fa-twitter"></i></a>
+                      <a href=""><i class="fab fa-telegram-plane"></i></a>
+                      <a href=""><i class="fab fa-linkedin"></i></a>
+                      <a href=""><i class="fab fa-instagram"></i></a>
+                  </div>
+              </div>
+
+            </div> 
+            <div class="botom-foter">
+                <p>کلیه حقوق محفوظ می باشد &copy; 2022</p>
+            </div> 
+        </div>
+    </footer>
+
+    <script src="./js file/script.js"></script>
+    <script src="./js file/jquery-3.6.0.min.js"></script>
+    <script src="./js file/jquery.min.js"></script>
+    <script src="./js file/owl.carousel.min.js"></script>
+    <script src="./js file/shoppingCart.js"></script>
+    <script>
+    $(document).ready(function(){
+    $(".owl-carousel").owlCarousel();
+    });
+    </script>
+</body>
+
+</html>
