@@ -1,2 +1,2 @@
 # shop-project
-## DEMO LINK : https://shop-project-mobile.vercel.app
+## DEMO LINK : https://mobile-shop-project.vercel.app
